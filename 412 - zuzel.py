@@ -252,13 +252,9 @@ while running:
 
     if helppanel:
         run=False
-        de,of,m=30,30,110
-        text(screen, height/2+of-m,width/2-de, "Controls: Z/X ; 2/3",30, (0,0,0))
-        text(screen, height/2+2*of-m,width/2-de, "Track resize: +/-",30, (0,0,0))
-        text(screen, height/2+3*of-m,width/2-de, "Restart: Enter",30, (0,0,0))
-        text(screen, height/2+4*of-m,width/2-de, "Reset: R",30, (0,0,0))  
-        text(screen, height/2+5*of-m,width/2-de, "Start: Space",30, (0,0,0))
-        text(screen, height/2+6*of-m,width/2-de, "Gamemode: G",30, (0,0,0))  
+        txt=["Controls: Z/X ; 2/3","Track resize: +/-","Restart: Enter","Reset: R","Start: Space","Gamemode: G"]
+        for i in txt:
+            text(screen, height/2+txt.index(i)*30-80,width/2-30, i,30, (0,0,0))
 
     pygame.display.flip()        
     pygame.display.update()
